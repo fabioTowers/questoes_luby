@@ -25,6 +25,9 @@ public class LogicaProgramacao {
         
         Primos primos = new Primos();
         System.out.println("Quantidade de primos até 10: " + primos.ContarNumerosPrimos(10));
+        
+        Vogais vg = new Vogais();
+        System.out.println("Ha " + vg.CalcularVogais("Luby Software") + " vogais na frase 'Luby Software'");
     }
     
 }
