@@ -32,7 +32,6 @@ public class Desconto {
         dPorcentagem = Integer.parseInt( porcentagem );
         
         dResultado = dValor - (dValor * (dPorcentagem/100.00));
-        System.out.println("dResultado: " + (dPorcentagem/100.00));
         NumberFormat nf = NumberFormat.getCurrencyInstance();
         resultado = nf.format( dResultado );
         return resultado;

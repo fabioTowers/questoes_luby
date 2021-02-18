@@ -34,6 +34,35 @@ public class LogicaProgramacao {
         
         Datas dt = new Datas();
         System.out.println("Diferença entre as datas: "+dt.CalcularDiferencaData("10122020", "25122020") + " dias.");
+        
+        Pares par = new Pares();
+        int[] vet={1,2,3,4,5};
+        int[] saida = par.ObterElementosPares(vet);
+        System.out.print( "Elemento pares do vetor: ");
+        for(int aux=0; aux<saida.length; aux++){
+            if(saida[aux] != 0)
+                System.out.print( saida[aux]+"," );
+            else
+                break;
+        }
+        System.out.print( "\n");
+        
+        VetorNomes vn = new VetorNomes();
+        String[] vetor = new String[]{
+            "John Doe",
+            "Jane Doe",
+            "Alice Jones",
+            "Bobby Louis",
+            "Lisa Romero"
+        };
+        String[] resultado;
+        resultado = vn.BuscarPessoa(vetor, "Doe");
+        System.out.print("Nomes no vetor: ");
+        for(int aux=0; aux<resultado.length; aux++){
+            if( resultado[aux] != null )
+                System.out.print(resultado[aux] + ", ");
+        }
+        System.out.println();
     }
     
 }
