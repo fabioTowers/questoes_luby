@@ -16,7 +16,6 @@ public class Fatorial {
         numero = num;
         for(int x=(num-1); x >= 1; x--){
             numero = numero * x;
-            System.out.println(numero);
         }
         return numero;
     }
