@@ -28,6 +28,12 @@ public class LogicaProgramacao {
         
         Vogais vg = new Vogais();
         System.out.println("Ha " + vg.CalcularVogais("Luby Software") + " vogais na frase 'Luby Software'");
+        
+        Desconto d = new Desconto();
+        System.out.println("R$ 6.800,00 descontado de 30%: " + d.CalcularValorComDescontoFormatado("R$ 6.800,00", "30%"));
+        
+        Datas dt = new Datas();
+        System.out.println("Diferença entre as datas: "+dt.CalcularDiferencaData("10122020", "25122020") + " dias.");
     }
     
 }
