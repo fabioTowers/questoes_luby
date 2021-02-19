@@ -17,6 +17,8 @@ public class VendingMachine {
     public static void main(String[] args) {
         // TODO code application logic here
         Controlador control = new Controlador();
+        control.exibirProdutos();
+        
     }
     
 }

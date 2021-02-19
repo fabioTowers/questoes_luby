@@ -18,13 +18,18 @@ public class Controlador {
     private Double troco;//Calculado
     
     private Estoque est;
+    private TelaInicial ti;
     
     public Controlador(){
-        Estoque est = new Estoque();
         
-        TelaInicial ti = new TelaInicial();
+        est = new Estoque();
+        
+        ti = new TelaInicial();
         ti.setVisible(true);
-        //ti.inicializarTabela(est.exibirOpcoes());
+    }
+    
+    public void exibirProdutos(){
+        ti.inicializarTabela(est.exibirOpcoes());
     }
     
     public String comprar(Integer opc, Integer qtd, Double valorPago){

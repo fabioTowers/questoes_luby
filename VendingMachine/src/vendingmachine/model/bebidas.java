@@ -52,7 +52,7 @@ public class Bebidas {
     }
     
     public String getMarca(){
-        return tipo;
+        return marca;
     }
     
     public Integer getQtd(){

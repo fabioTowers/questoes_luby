@@ -14,16 +14,17 @@ import vendingmachine.model.*;
 public class Estoque {
     private Double totalVendas;
     
-    Bebidas chaMate;
-    Bebidas sucoDelVale;
-    Bebidas refriPepsi;
+    private Bebidas chaMate;
+    private Bebidas sucoDelVale;
+    private Bebidas refriPepsi;
     
     //Inicializando o estoque
     public Estoque(){
         //tipo, marca, ml, qtd, preco, id
-        Bebidas chaMate = new Bebidas("Chá", "Mate Leão", 200.00, 18, 2.50, 1);
-        Bebidas sucoDelVale = new Bebidas("Suco", "Del Vale", 250.00, 24, 3.20, 2);
-        Bebidas refriPepsi = new Bebidas("Refrigerante", "Pepsi", 300.00, 12, 4.00, 3);
+        
+        chaMate = new Bebidas("Chá", "Mate Leão", 200.00, 18, 2.50, 1);
+        sucoDelVale = new Bebidas("Suco", "Del Vale", 250.00, 24, 3.20, 2);
+        refriPepsi = new Bebidas("Refrigerante", "Pepsi", 300.00, 12, 4.00, 3);
         
         totalVendas = 0.0;
     }
