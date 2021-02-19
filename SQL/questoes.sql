@@ -86,3 +86,6 @@ VALUES (
 	'Evento E',
     (SELECT id FROM tabela_pessoa WHERE nome='Lisa Romero')
 );
+
+/*2.4***********************************/
+UPDATE tabela_evento SET pessoa_id = (SELECT id FROM tabela_pessoa WHERE nome="John Doe") WHERE id = 4;
