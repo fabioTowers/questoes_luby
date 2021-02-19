@@ -106,4 +106,5 @@ WHERE tabela_evento.pessoa_id IS NULL)registros_para_excluir
 
 SET SQL_SAFE_UPDATES = 1;
 
-
+/*2.7***********************************/
+ALTER TABLE tabela_pessoa ADD idade int unsigned;
