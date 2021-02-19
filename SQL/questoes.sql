@@ -78,4 +78,4 @@ INNER JOIN tabela_evento
 ON tabela_pessoa.id = pessoa_id;
 
 /*2.2***********************************/
-
+SELECT nome FROM tabela_pessoa WHERE LOCATE('Doe', nome);
