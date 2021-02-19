@@ -63,6 +63,26 @@ public class LogicaProgramacao {
                 System.out.print(resultado[aux] + ", ");
         }
         System.out.println();
-    }
+        
+        Matriz mt = new Matriz();
+        String vetorNumeros = "1,2,3,4,5,6";
+        int[][] matriz = new int[50][2];
+        matriz = mt.TransformarEmMatriz(vetorNumeros);
+        System.out.println("Numeros na matriz:");
+        for(int a=0; a<50; a++){
+            for(int b=0; b<=1; b++){
+                if( matriz[a][b] != 0){
+                    System.out.print("\t"+matriz[a][b]+", ");
+                    if(b==1)
+                        System.out.println();
+                }
+                else
+                    break;
+            }//fim do for de b
+        }//fim do for de a
+        
+        
+        
+    }//fim do main
     
-}
+}//fim da classe
