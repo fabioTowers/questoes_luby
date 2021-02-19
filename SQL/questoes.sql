@@ -89,3 +89,6 @@ VALUES (
 
 /*2.4***********************************/
 UPDATE tabela_evento SET pessoa_id = (SELECT id FROM tabela_pessoa WHERE nome="John Doe") WHERE id = 4;
+
+/*2.5***********************************/
+DELETE FROM tabela_evento WHERE id = 2;
