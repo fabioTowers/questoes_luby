@@ -5,6 +5,8 @@
  */
 package controller;
 
+import views.TelaInicial;
+
 /**
  *
  * @author Fabio Mendes
@@ -15,7 +17,15 @@ public class Controlador {
     private Integer valorPago;//Digitada pelo usuário
     private Double troco;//Calculado
     
-    Estoque est = new Estoque();
+    private Estoque est;
+    
+    public Controlador(){
+        Estoque est = new Estoque();
+        
+        TelaInicial ti = new TelaInicial();
+        ti.setVisible(true);
+        //ti.inicializarTabela(est.exibirOpcoes());
+    }
     
     public String comprar(Integer opc, Integer qtd, Double valorPago){
         if(est.validarOpcao(opc)){

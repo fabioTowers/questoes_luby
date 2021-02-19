@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package vendingmachine;
-
+import controller.Controlador;
 /**
  *
  * @author Fabio Mendes
@@ -16,6 +16,7 @@ public class VendingMachine {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Controlador control = new Controlador();
     }
     
 }

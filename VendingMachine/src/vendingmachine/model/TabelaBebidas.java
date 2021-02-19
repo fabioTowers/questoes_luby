@@ -21,6 +21,11 @@ public class TabelaBebidas extends AbstractTableModel{
     public int getRowCount() {//Quantidade de Linhas
         return prods.size();
     }
+    
+    @Override
+    public String getColumnName(int column){
+        return colunas[column];
+    }
 
     @Override
     public int getColumnCount() {//Quantidade de Colunas
@@ -46,4 +51,7 @@ public class TabelaBebidas extends AbstractTableModel{
         return null;
     }
     
+    public void adicionarDadosTabela(List<Bebidas> bebidas){
+        this.prods = bebidas;
+    }
 }
