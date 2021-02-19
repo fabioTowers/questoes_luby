@@ -79,3 +79,10 @@ ON tabela_pessoa.id = pessoa_id;
 
 /*2.2***********************************/
 SELECT nome FROM tabela_pessoa WHERE LOCATE('Doe', nome);
+
+/*2.3***********************************/
+INSERT INTO tabela_evento (evento, pessoa_id)
+VALUES (
+	'Evento E',
+    (SELECT id FROM tabela_pessoa WHERE nome='Lisa Romero')
+);
