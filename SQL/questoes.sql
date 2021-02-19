@@ -108,3 +108,15 @@ SET SQL_SAFE_UPDATES = 1;
 
 /*2.7***********************************/
 ALTER TABLE tabela_pessoa ADD idade int unsigned;
+
+/*2.8***********************************/
+CREATE TABLE tabela_telefone
+(
+	id int unsigned not null auto_increment,
+    telefone varchar(200),
+    pessoa_id int unsigned,
+    PRIMARY KEY (id),
+    CONSTRAINT fk_telefone_pessoa FOREIGN KEY (pessoa_id) REFERENCES tabela_pessoa (id)
+);
+
+SELECT * FROM tabela_telefone;
