@@ -81,7 +81,16 @@ public class LogicaProgramacao {
             }//fim do for de b
         }//fim do for de a
         
-        
+        ComparaVetores cv = new ComparaVetores();
+        int[] vet1 = new int[]{1,2,3,4,5};
+        int[] vet2 = new int[]{1,2,5};
+        int[] result = cv.ObterElementosFaltantes(vet1, vet2);
+        System.out.println("Os elementos faltantes:");
+        for(int aux=0; aux<result.length; aux++){
+            if(result[aux] != 0){
+                System.out.print("\t" + result[aux] + ",");
+            }
+        }
         
     }//fim do main
     
