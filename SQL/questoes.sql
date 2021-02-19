@@ -120,3 +120,6 @@ CREATE TABLE tabela_telefone
 );
 
 SELECT * FROM tabela_telefone;
+
+/*2.9***********************************/
+CREATE UNIQUE INDEX idx_telefone ON tabela_telefone(telefone);
