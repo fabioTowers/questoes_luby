@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package controller;
+import java.util.ArrayList;
+import java.util.List;
 import vendingmachine.model.*;
 /**
  *
@@ -93,14 +95,25 @@ public class Estoque {
     public void subtrairItem(Integer opc, Integer qtd){
         switch(opc){
             case 1:
+                totalVendas = totalVendas + chaMate.consultarPreco(qtd);
                 chaMate.retirarItens(qtd);
             break;
             case 2:
+                totalVendas = totalVendas + sucoDelVale.consultarPreco(qtd);
                 sucoDelVale.retirarItens(qtd);
             break;
             case 3:
+                totalVendas = totalVendas + refriPepsi.consultarPreco(qtd);
                 refriPepsi.retirarItens(qtd);
             break;
         }//fim do switch
     }//fim de subtrairItem
+    
+    public List<Bebidas> exibirOpcoes(){
+        List<Bebidas> prods = new ArrayList<>();
+        prods.add(chaMate);
+        prods.add(sucoDelVale);
+        prods.add(refriPepsi);
+        return prods;
+    }
 }//fim da classe
