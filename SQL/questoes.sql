@@ -92,3 +92,18 @@ UPDATE tabela_evento SET pessoa_id = (SELECT id FROM tabela_pessoa WHERE nome="J
 
 /*2.5***********************************/
 DELETE FROM tabela_evento WHERE id = 2;
+
+/*2.6***********************************/
+SET SQL_SAFE_UPDATES = 0;
+
+DELETE FROM tabela_pessoa 
+WHERE id IN (
+SELECT * FROM(SELECT tabela_pessoa.id FROM tabela_pessoa
+LEFT OUTER JOIN tabela_evento
+ON tabela_pessoa.id = tabela_evento.pessoa_id
+WHERE tabela_evento.pessoa_id IS NULL)registros_para_excluir
+);
+
+SET SQL_SAFE_UPDATES = 1;
+
+
