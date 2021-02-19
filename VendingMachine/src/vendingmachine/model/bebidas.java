@@ -9,13 +9,22 @@ package vendingmachine.model;
  *
  * @author Fabio Mendes
  */
-public class bebidas {
+public class Bebidas {
     private String tipo;//Ex.: chá, suco, refrigerante
     private String marca;//Ex.: Mate Leão, DelVale, Pepsi
-    private Float ml;//Ex.: 250, 400, 200 (ml)
+    private Double ml;//Ex.: 250, 400, 200 (ml)
     private Integer qtd;//Ex.: 10 latas
     private Double preco;//R$
     private Integer id;//Opção para escolha
+    
+    public Bebidas(String tipo, String marca, Double ml, Integer qtd, Double preco, Integer id){
+        this.tipo = tipo;
+        this.marca = marca;
+        this.ml = ml;
+        this.qtd = qtd;
+        this.preco = preco;
+        this.id = id;
+    }
     
     public Boolean retirarItens (Integer qtdSubtrair){
         if((qtd - qtdSubtrair) >= 0){//há itens para retirar?
@@ -26,7 +35,7 @@ public class bebidas {
         }
     }//fim de retirar itens
     
-    public Double ConsultarPreco(Integer qtdComprar){
+    public Double consultarPreco(Integer qtdComprar){
         return (preco * qtdComprar);
     }
     
@@ -38,11 +47,15 @@ public class bebidas {
         return tipo;
     }
     
-    public Float getMl(){
+    public Double getMl(){
         return ml;
     }
     
     public String getMarca(){
         return tipo;
+    }
+    
+    public Integer getQtd(){
+        return qtd;
     }
 }
