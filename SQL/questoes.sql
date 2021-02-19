@@ -123,3 +123,6 @@ SELECT * FROM tabela_telefone;
 
 /*2.9***********************************/
 CREATE UNIQUE INDEX idx_telefone ON tabela_telefone(telefone);
+
+/*2.10***********************************/
+DROP TABLE tabela_telefone;
