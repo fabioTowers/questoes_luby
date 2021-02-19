@@ -1,5 +1,7 @@
 CREATE DATABASE luby;
 
+USE luby;
+
 CREATE TABLE tabela_pessoa
 (
 	id int unsigned not null auto_increment,
@@ -12,6 +14,7 @@ CREATE TABLE tabela_evento
 	id int unsigned not null auto_increment,
     evento varchar(50) not null,
     PRIMARY KEY (id),
+    pessoa_id int unsigned,
     CONSTRAINT fk_evento_pessoa FOREIGN KEY (pessoa_id) REFERENCES tabela_pessoa (id)
 );
 
@@ -40,6 +43,8 @@ VALUES (
 	'Lisa Romero'
 );
 
+SELECT * FROM tabela_pessoa;
+
 INSERT INTO tabela_evento (evento, pessoa_id)
 VALUES (
 	'Evento A',
@@ -64,4 +69,13 @@ VALUES (
     null
 );
 
+SELECT * FROM tabela_evento;
+
+/*2.1***********************************/
+SELECT tabela_pessoa.nome, tabela_evento.evento
+FROM tabela_pessoa
+INNER JOIN tabela_evento
+ON tabela_pessoa.id = pessoa_id;
+
+/*2.2***********************************/
 
