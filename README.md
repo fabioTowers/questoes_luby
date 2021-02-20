@@ -23,7 +23,7 @@ Questão | Link
 ---
 ## SQL
 
-Respondi as questões dessa seção em um único script SQL disponível [aqui](https://github.com/fabioTowers/questoes_luby/blob/master/SQL/questoes.sql "Respostas SQL")
+Respondi as questões dessa seção em um único script SQL disponível [aqui](https://github.com/fabioTowers/questoes_luby/blob/master/SQL/questoes.sql "Respostas SQL").
 
 ---
 ## Desafio
@@ -32,4 +32,4 @@ Fiz o desafio no NetBeans utilizando Java. A interface foi feita com **Java Swin
 Na tabela podemos ver todos os produtos disponíveis, para efetuar a compra selecione a opção de produto correspondente, a quantidade desejada e o valor que está pagando. Na lateral direita há a tela, que exibe o total em vendas até o momento, se a operação de compra foi bem sucedida ou não e o valor de troco.
 Tentar comprar uma quantidade superior ao disponível e inserir uma quantia em _Valor Pago_ menor do que o total da compra impedem a compra de ser realizada. A tabela é atualizada cada vez que uma compra é concluída, assim como o total em vendas.
 
-
+![](https://github.com/fabioTowers/questoes_luby/blob/master/print_1.png)
