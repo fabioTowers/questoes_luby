@@ -28,7 +28,7 @@ public class Bebidas {
     
     public Boolean retirarItens (Integer qtdSubtrair){
         if((qtd - qtdSubtrair) >= 0){//há itens para retirar?
-            qtd = qtd = qtdSubtrair;
+            qtd = qtd - qtdSubtrair;
             return true;
         } else {
             return false;

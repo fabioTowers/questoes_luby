@@ -5,6 +5,7 @@
  */
 package vendingmachine;
 import controller.Controlador;
+import views.TelaInicial;
 /**
  *
  * @author Fabio Mendes
@@ -16,9 +17,10 @@ public class VendingMachine {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Controlador control = new Controlador();
-        control.exibirProdutos();
-        
+        //Controlador control = new Controlador();
+        //control.exibirProdutos();
+        TelaInicial ti = new TelaInicial();
+        ti.setVisible(true);
     }
     
 }

@@ -47,15 +47,15 @@ public class Estoque {
     public Boolean validarQuantidade(Integer qtd, Integer opc){
         switch(opc){//Verifica se é possível atender a quantidade solicitada
             case 1:
-                if(chaMate.getQtd() <= qtd)
+                if(chaMate.getQtd() >= qtd)
                     return true;
             break;
             case 2:
-                if(sucoDelVale.getQtd() <= qtd)
+                if(sucoDelVale.getQtd() >= qtd)
                     return true;
             break;
             case 3:
-                if(refriPepsi.getQtd() <= qtd)
+                if(refriPepsi.getQtd() >= qtd)
                     return true;
             default:
                 return false;
@@ -116,5 +116,9 @@ public class Estoque {
         prods.add(sucoDelVale);
         prods.add(refriPepsi);
         return prods;
+    }
+    
+    public Double totalVendas(){
+        return totalVendas;
     }
 }//fim da classe

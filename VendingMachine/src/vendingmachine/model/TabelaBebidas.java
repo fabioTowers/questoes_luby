@@ -53,5 +53,6 @@ public class TabelaBebidas extends AbstractTableModel{
     
     public void adicionarDadosTabela(List<Bebidas> bebidas){
         this.prods = bebidas;
+        this.fireTableDataChanged();
     }
 }

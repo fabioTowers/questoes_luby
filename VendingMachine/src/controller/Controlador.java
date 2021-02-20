@@ -5,6 +5,8 @@
  */
 package controller;
 
+import java.util.List;
+import vendingmachine.model.Bebidas;
 import views.TelaInicial;
 
 /**
@@ -18,18 +20,18 @@ public class Controlador {
     private Double troco;//Calculado
     
     private Estoque est;
-    private TelaInicial ti;
     
     public Controlador(){
         
         est = new Estoque();
-        
-        ti = new TelaInicial();
-        ti.setVisible(true);
     }
     
-    public void exibirProdutos(){
-        ti.inicializarTabela(est.exibirOpcoes());
+    public List<Bebidas> exibirProdutos(){
+        return est.exibirOpcoes();
+    }
+    
+    public Double vendas(){
+        return est.totalVendas();
     }
     
     public String comprar(Integer opc, Integer qtd, Double valorPago){
@@ -39,20 +41,23 @@ public class Controlador {
                     //Tudo certo para efetuar a venda:
                     est.subtrairItem(opc, qtd);
                     //est.verificarTroco(valorPago, opc, qtd);
-                    return Double.toString(est.verificarTroco(valorPago, opc, qtd));
+                    return "Compra realizada com sucesso!\nTroco R$ "+Double.toString(est.verificarTroco(valorPago, opc, qtd));
                 }
                 else{//O valor de pagamento é inválido
                     //Exibir uma mensagem de erro relacionada ao valor pago
+                    System.out.println("A opção informada foi ["+valorPago+"]");
                     return "ERRO: Verifique o valor de pagamento, o valor informado é incompatível.";
                 }
             }
             else{//A quantidade é inválida
                 //Deve exibir uma mensagem de erro relacionada a quantidade
+                System.out.println("A opção informada foi ["+qtd+"]");
                 return "ERRO: Verifique a quantidade, o valor informado é inválido.";
             }
         }
         else{//A Opção por algum motivo é inválida
             //Deve exibir uma mensagem de erro relacionada a opção
+            System.out.println("A opção informada foi ["+opc+"]");
             return "ERRO: Verifique a opção, o valor informado é inválido.";
         }
     }
